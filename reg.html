@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>注册页面</title>
+    <script src="js/index.js"></script>
+</head>
+
+<body onload="YZM()">
+    <center>
+        <h3>注册页面</h3>
+        <hr />
+        <form action="" method="get" onsubmit="return zong()">
+            <table>
+                <tr height="35px">
+                    <td width="150px">用户名：</td>
+                    <td width="400px">
+                        <input type="text" name="uname" id="uname" value="" alt="用户名" onblur="checkName()" />
+                        <span id="uname_span">*用户名必须是3-5位的汉字</span>
+                    </td>
+                </tr>
+                <tr height="35px">
+                    <td>密码：</td>
+                    <td>
+                        <input type="password" name="pwd" id="pwd" value="" alt="密码" onblur="checkPwd()" />
+                        <span id="pwd_span">*密码必须是3-6位数字</span>
+
+                    </td>
+                </tr>
+                <tr height="35px">
+                    <td>手机号：</td>
+                    <td>
+                        <input type="text" name="phone" id="phone" value="" alt="手机号" onblur="checkPhone()" />
+                        <span id="phone_span"></span>
+                    </td>
+                </tr>
+                <tr height="35px">
+                    <td>邮箱：</td>
+                    <td>
+                        <input type="text" name="email" id="email" value="" alt="邮箱" onblur="checkEmail()" />
+                        <span id="email_span"></span>
+                    </td>
+                </tr>
+                <tr height="35px">
+                    <td>性别：</td>
+                    <td>
+                        男：<input type="radio" name="sex" id="" value="1" onclick="checkSex()" /> 女：
+                        <input type="radio" name="sex" id="" value="0" onclick="checkSex()" />
+
+                        <span id="sex_span">
+						
+					</span>
+                    </td>
+                </tr>
+
+                <tr height="35px">
+                    <td>验证码</td>
+                    <td>
+                        <input type="number" name="" id="yzm" value="" onblur="checkYZM()" />
+                        <span id="yzm_span"></span>
+                        <span id="yzm2_span"></span>
+                    </td>
+                </tr>
+
+                <tr height="35px">
+                    <td>个性签名：</td>
+                    <td>
+                        <textarea name="intro" rows="2" cols="30"></textarea>
+                    </td>
+                </tr>
+
+                <tr height="35px">
+                    <td colspan="2" align="center">
+                        <input type="checkbox" name="" id="check" value="" onclick="checkAgree()">是否同意加入邪教
+                    </td>
+                </tr>
+                <tr height="35px">
+                    <td colspan="2" align="center">
+                        <input type="submit" id="sub" value="注册" disabled="true" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+
+</body>
+
+</html>
