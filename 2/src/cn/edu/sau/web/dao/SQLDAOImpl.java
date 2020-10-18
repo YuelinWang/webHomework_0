@@ -26,7 +26,7 @@ public class SQLDAOImpl implements SQLDAO{
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("name",resultSet.getString("name"));
                 jsonObject.put("key",resultSet.getString("key"));
-                jsonObject.put("telphone",resultSet.getString("telphone"));
+                jsonObject.put("telephone",resultSet.getString("telephone"));
                 jsonObject.put("email",resultSet.getString("email"));
                 jsonObject.put("sex",resultSet.getString("sex"));
                 jsonObject.put("hobby",resultSet.getString("hobby"));
@@ -50,7 +50,7 @@ public class SQLDAOImpl implements SQLDAO{
             	 JSONObject jsonObject = new JSONObject();
                  jsonObject.put("name",resultSet.getString("name"));
                  jsonObject.put("key",resultSet.getString("key"));
-                 jsonObject.put("telphone",resultSet.getString("telphone"));
+                 jsonObject.put("telephone",resultSet.getString("telephone"));
                  jsonObject.put("email",resultSet.getString("email"));
                  jsonObject.put("sex",resultSet.getString("sex"));
                  jsonObject.put("hobby",resultSet.getString("hobby"));
@@ -65,11 +65,9 @@ public class SQLDAOImpl implements SQLDAO{
 
     @Override
     public String insert(UserInfo userInfo) {
-        String sql = "insert into "+dbTableName+"(name,email,key,rename,sex" +
-                "age,telphone,hobby,kind) values('"+userInfo.getname()+"','"+userInfo.getemail()+"','" +
-                userInfo.getkey()+"','"+userInfo.getrename()+"','"+userInfo.getSex()+"','"+
-                userInfo.getAge()+"','"+userInfo.getTelphone()+"','"+userInfo.gethobby()+"','"
-                +userInfo.getKind()+"')";
+        String sql = "insert into "+dbTableName+"(name,email,key,sex" +
+                "telephone,hobby,kind) values('"+userInfo.getname()+"','"+userInfo.getemail()+"','" +
+                userInfo.getkey()+"','"+userInfo.getSex()+"','"+userInfo.gettelephone()+"','"+userInfo.gethobby()+"')";
         try {
             Class.forName(JDBC_DRIVER);
             try {
