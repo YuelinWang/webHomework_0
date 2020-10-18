@@ -67,7 +67,7 @@ public class SQLDAOImpl implements SQLDAO{
     public String insert(UserInfo userInfo) {
         String sql = "insert into "+dbTableName+"(name,email,key,sex" +
                 "telephone,hobby) values('"+userInfo.getname()+"','"+userInfo.getemail()+"','" +
-                userInfo.getkey()+"','"+userInfo.getSex()+"','"+userInfo.gettelephone()+"','"+userInfo.gethobby()+"')";
+                userInfo.getkey()+"','"+userInfo.getSex()+"','"+userInfo.getTelephone()+"','"+userInfo.gethobby()+"')";
         try {
             Class.forName(JDBC_DRIVER);
             try {
