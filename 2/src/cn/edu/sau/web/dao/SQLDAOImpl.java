@@ -25,14 +25,11 @@ public class SQLDAOImpl implements SQLDAO{
             while(resultSet.next()){
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("name",resultSet.getString("name"));
-                jsonObject.put("email",resultSet.getString("email"));
                 jsonObject.put("key",resultSet.getString("key"));
-                jsonObject.put("rename",resultSet.getString("rename"));
-                jsonObject.put("sex",resultSet.getString("sex"));
-                jsonObject.put("age",resultSet.getInt("age"));
                 jsonObject.put("telphone",resultSet.getString("telphone"));
+                jsonObject.put("email",resultSet.getString("email"));
+                jsonObject.put("sex",resultSet.getString("sex"));
                 jsonObject.put("hobby",resultSet.getString("hobby"));
-                jsonObject.put("kind",resultSet.getString("kind"));
                 jsonArray.add(jsonObject);
             }
             return jsonArray.toString();
@@ -52,14 +49,11 @@ public class SQLDAOImpl implements SQLDAO{
             while(resultSet.next()){
             	 JSONObject jsonObject = new JSONObject();
                  jsonObject.put("name",resultSet.getString("name"));
-                 jsonObject.put("email",resultSet.getString("email"));
                  jsonObject.put("key",resultSet.getString("key"));
-                 jsonObject.put("rename",resultSet.getString("rename"));
-                 jsonObject.put("sex",resultSet.getString("sex"));
-                 jsonObject.put("age",resultSet.getInt("age"));
                  jsonObject.put("telphone",resultSet.getString("telphone"));
+                 jsonObject.put("email",resultSet.getString("email"));
+                 jsonObject.put("sex",resultSet.getString("sex"));
                  jsonObject.put("hobby",resultSet.getString("hobby"));
-                 jsonObject.put("kind",resultSet.getString("kind"));
                  jsonArray.add(jsonObject);
             }
             return jsonArray.toString();

@@ -32,7 +32,6 @@ public class UserInfo {
 		this.key = key;
 	}
 
-
 	public void setrename(String rename) {
 		this.name = rename;
 	}
