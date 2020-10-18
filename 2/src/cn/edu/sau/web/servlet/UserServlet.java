@@ -20,7 +20,7 @@ public class UserServlet extends HttpServlet{
         String operation = request.getParameter("operation");
         SQLDAO sqldao = new SQLDAOImpl();
         UserInfo userInfo = new UserInfo();
-        String name,email,key,rename,sex,age,telphone,hobby,kind,result;
+        String name,email,key,rename,sex,age,telephone,hobby,kind,result;
         result = "";
         switch(operation){
             case "select":result = sqldao.select();break;
@@ -31,7 +31,7 @@ public class UserServlet extends HttpServlet{
                 rename = request.getParameter("rename");
                 sex = request.getParameter("sex");
                 age = request.getParameter("age");
-                telphone = request.getParameter("telphone");
+                telephone = request.getParameter("telephone");
                 hobby = request.getParameter("hobby");
                 kind = request.getParameter("kind");
                 userInfo.setname(name);
@@ -45,7 +45,7 @@ public class UserServlet extends HttpServlet{
                     userInfo.setSex("女");
                 }
                 userInfo.setAge(Integer.parseInt(age));
-                userInfo.setTelphone(telphone);
+                userInfo.setTelephone(telephone);
                 userInfo.sethobby(hobby);
                 userInfo.setKind(kind);
                 result = sqldao.insert(userInfo);

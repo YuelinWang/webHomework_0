@@ -66,7 +66,7 @@ public class SQLDAOImpl implements SQLDAO{
     @Override
     public String insert(UserInfo userInfo) {
         String sql = "insert into "+dbTableName+"(name,email,key,sex" +
-                "telephone,hobby,kind) values('"+userInfo.getname()+"','"+userInfo.getemail()+"','" +
+                "telephone,hobby) values('"+userInfo.getname()+"','"+userInfo.getemail()+"','" +
                 userInfo.getkey()+"','"+userInfo.getSex()+"','"+userInfo.gettelephone()+"','"+userInfo.gethobby()+"')";
         try {
             Class.forName(JDBC_DRIVER);

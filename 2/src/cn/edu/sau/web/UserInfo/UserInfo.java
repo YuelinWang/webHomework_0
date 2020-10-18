@@ -44,12 +44,12 @@ public class UserInfo {
 		this.sex = sex;
 	}
 
-	public String getTelphone() {
+	public String getTelephone() {
 		return telephone;
 	}
 
-	public void setTelphone(String telphone) {
-		this.telephone = telphone;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
 	public String gethobby() {
