@@ -2,14 +2,11 @@ package cn.edu.sau.web.UserInfo;
 
 public class UserInfo {
 	private String name;
-	private String email;
 	private String key;
-	private String rename;
+	private String telephone;
+	private String email;
 	private String sex;
-	private int age;
-	private String telphone;
 	private String hobby;
-	private String kind;
 
 	public String getname() {
 		return name;
@@ -35,10 +32,7 @@ public class UserInfo {
 		this.key = key;
 	}
 
-	public String getrename() {
-		return rename;
-	}
-	
+
 	public void setrename(String rename) {
 		this.name = rename;
 	}
@@ -50,21 +44,13 @@ public class UserInfo {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
 
 	public String getTelphone() {
-		return telphone;
+		return telephone;
 	}
 
 	public void setTelphone(String telphone) {
-		this.telphone = telphone;
+		this.telephone = telphone;
 	}
 
 	public String gethobby() {
@@ -75,11 +61,4 @@ public class UserInfo {
 		this.hobby = hobby;
 	}
 
-	public String getKind() {
-		return kind;
-	}
-
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
 }
