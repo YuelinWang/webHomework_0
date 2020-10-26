@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  	<title>健身中心教练管理</title>
+    <link type="text/css" href="../css/login.css" rel="stylesheet"/>
+    <script type="text/javascript" src="login.js"></script>
+</head>
+<body >
+	<div id="mainbox">
+		<label>&nbsp;&nbsp;&nbsp;健身中心欢迎你！</label>
+	</div>
+	<div>
+		<form id="myfrm" method="post" action=".././loginservlet">
+		<ul>
+			<span>账号：<input id="rname" name="rname" type="text" class="input01"/></span><br>
+			<span>密码：<input id="rpass" name="rpass" type="password" class="input01"/></span><br>
+			<span><li>身份：&nbsp;&nbsp;
+				<input name="urole" type="radio" id="urole" value="0" checked>教练&nbsp;&nbsp;
+				<input type="radio" name="urole" id="urole" value="1">管理员&nbsp;</li>
+			</span>
+		</ul><br>
+			<center>
+				<input type="submit" name="btn1" id="btn1" value="登陆" class="btn1">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" name="btn2" id="btn2" value="重置" class="btn2"><br><br>
+                <a href="register.html">注册账号</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="#">忘记密码？</a>
+			</center>
+		</form>
+    </div>
+	</div>
+</body>
+</html>

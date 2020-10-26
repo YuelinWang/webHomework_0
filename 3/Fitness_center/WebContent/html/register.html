@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>用户注册</title>
+		<link type="text/css" href="../css/style.css" rel="stylesheet"/>
+		<script type="text/javascript" src="register.js"></script>
+		<script>
+			function jump(){
+				window.location.href="http://localhost:8081/Fitness_center/html/index.html";
+			}
+		</script>
+	</head>
+	<body>
+	<div id="box1">
+    <div id="title">新用户注册</div>
+  <div id="reg">
+    <form id="myform" method="post" action=".././myservlet">
+      <ul>
+        <li>用户账号：
+          <input name="rname" type="text" class="input01" id="rname" placeholder="请输入账号">        
+        <span class="font01" id=rname-html>*</span></li>
+        <li>密　　码： <input name="rpass" type="password" class="input01" id="rpass" placeholder="请输入6位密码"> 
+        <span class="font01" id=rpass-html>*</span></li>
+        <li>确认密码： <input name="repass" type="password" class="input01" id="repass" placeholder="请再次输入6位密码">
+        <span class="font01" id=repass-html>*</span></li>
+        <span><li>性　　别：
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="sex" type="radio" id="sex" value="男" checked>男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="sex" id="sex" value="女">女        
+            </li>
+        </span>
+        <li>出生日期：<input name="date" type="date" id="date" class="input01"> 
+        <span class="font01" id="date-html">*</span></li>
+        <li>电子邮箱：<input name="email" type="email" id="email" class="input01" placeholder="请输入邮箱"> 
+        <span class="font01" id="email-html">*</span></li>
+        <li>联系电话：<input name="tel" type="tel" class="input01" id="tel" placeholder="请输入电话"> 
+        <span class="font01" id="tel-html">*</span></li>
+        <li>用户角色：<select name="character" class="input01" id="character">
+          <option value="教练" selected>教练</option>
+          <option value="管理员">管理员</option>
+          </select> <span class="font01">*</span>
+        </li>
+        <li id="show">资格证等级：<select name="grade" required class="input01" id="grade">
+          <option value="初级" selected>初级</option>
+          <option value="高级">中级</option>
+          <option value="高级">高级</option>
+          </select> <span class="font01" id="select-html">*</span>
+        </li>
+        <li>业余爱好：
+       		<input name="hobby" type="checkbox" id="hobby" value="健身" checked/>
+       		<label for="hobby">健身</label>
+			<input type="checkbox" id="hobby" name="hobby" value="篮球"/><label for="hobby">篮球</label>
+            <input type="checkbox" id="hobby" name="hobby" value="跑步"/><label for="hobby">跑步</label>
+            <input type="checkbox" id="hobby" name="hobby" value="滑雪"/><label for="hobby">滑雪</label>
+            <input type="checkbox" id="hobby" name="hobby" value="游泳"/><label for="hobby">游泳</label>
+        <span class="font01"></span></li>
+        <li>个人介绍：
+        	<center><textarea name="personal" id="personal" rows="5" cols="50" placeholder="在这里写下五十字以内个人介绍（可不填）"></textarea></center>
+        <span class="font01"></span></li>
+      </ul>
+  <input type="submit" name="btn02" id="btn02" value="立即注册">
+        <input type="button" name="btn03" id="btn03" value="直接登陆"  onclick="jump()">
+    </form>
+    </div>
+</div>
+	</body>
+</html>
